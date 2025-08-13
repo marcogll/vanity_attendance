@@ -768,6 +768,9 @@ void loop(){
     } else if (line.length() < 64) line += c;
   }
 }
+
+´´
+
 ✅ Checklist antes de probar
 OLED: cable corto, pull‑ups 4.7 k si no trae, capacitores 100 nF + 10 µF en VCC/GND.
 
