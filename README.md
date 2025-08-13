@@ -768,25 +768,24 @@ void loop(){
     } else if (line.length() < 64) line += c;
   }
 }
+```
 
-´´
+##✅ Checklist antes de probar
+*OLED: cable corto, pull‑ups 4.7 k si no trae, capacitores 100 nF + 10 µF en VCC/GND.
 
-✅ Checklist antes de probar
-OLED: cable corto, pull‑ups 4.7 k si no trae, capacitores 100 nF + 10 µF en VCC/GND.
+*RC522: 3.3 V y antena despejada.
 
-RC522: 3.3 V y antena despejada.
+*RTC: batería CR2032 buena, pines CE=25, IO=26, CLK=27.
 
-RTC: batería CR2032 buena, pines CE=25, IO=26, CLK=27.
+*GND común para todo.
 
-GND común para todo.
+*Webhook responde 200 OK.
 
-Webhook responde 200 OK.
+##🧪 Diagnóstico rápido
+*Hora mala → SET 2025-08-08 14:00:00 por Serial.
 
-🧪 Diagnóstico rápido
-Hora mala → SET 2025-08-08 14:00:00 por Serial.
+*Sin NDEF → ve si el log muestra Classic JSON detectado.
 
-Sin NDEF → ve si el log muestra Classic JSON detectado.
+*Envía pero falla a veces → revisa RSSI Wi‑Fi, HTTP code y timeouts.
 
-Envía pero falla a veces → revisa RSSI Wi‑Fi, HTTP code y timeouts.
-
-OLED se cae → revisa pull‑ups, desacople, baja I²C a 50 kHz.
+*OLED se cae → revisa pull‑ups, desacople, baja I²C a 50 kHz.
